@@ -1,4 +1,10 @@
+body {
+  background-color: #1A7529;
+  margin-left: 100px;
+}
+
 .card {
+  background-color: white;
   float: left;
   border: solid 1px black;
   width: 100px;

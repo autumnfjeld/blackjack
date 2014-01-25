@@ -17,3 +17,8 @@ class window.AppView extends Backbone.View
     @$el.html @template()
     @$('.player-hand-container').html new HandView(collection: @model.get 'playerHand').el
     @$('.dealer-hand-container').html new HandView(collection: @model.get 'dealerHand').el
+
+    # two hands are shown, player and dealer. they are created with collections of
+    # "this model = @model"  @model refers to App model
+    # BUT where is the link between AppView and @model made?
+    #'playe'
