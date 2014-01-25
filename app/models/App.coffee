@@ -9,9 +9,9 @@ class window.App extends Backbone.Model
     #@get('playerHand').on 'bust', console.log('check', @get('deck'))@   #if event bust happens do stuff
 
   newDeal: ->
-    @initialize()
-    # console.log('test', @get('playerHand'))
+    #@initialize()  #why doesn't this work?
+    console.log('test', @get('playerHand'))
     # #, @get('playerhand').scores())
-    # @get('playerHand').clear()
-    # @set @get('playerHand'), @get('deck').dealPlayer()
+    @get('playerHand').clear()
+    @set @get('playerHand'), @get('deck').dealPlayer()
     # console.log('again', @get('playerHand'))

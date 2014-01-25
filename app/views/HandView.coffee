@@ -15,7 +15,6 @@ class window.HandView extends Backbone.View
     @$el.append @collection.map (card) ->
       new CardView(model: card).$el
     @$('.score').text @collection.scores()[0]
-    #@$('.bust').text @collection.bust()
 
 
     #collection refers to the collection set up in AppView

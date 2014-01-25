@@ -34,21 +34,8 @@ class window.Hand extends Backbone.Collection
     @reset()
     console.log('after clear', @length)
 
-
-
-
-  # bust: ->
-  #   "bust" if @scores()[0] > 21
-  #   #@scores()[0]
-    
-  # sendTriggers: ->
-  #   @trigger 'signal1'
-  #   
-  # scores: ->
-  #   hasAce = @reduce (memo, card) ->
-  #     memo or card.get('value') is 1
-  #   , false
-  #   score = @reduce (score, card) ->
-  #     score + if card.get 'revealed' then card.get 'value' else 0
-  #   , 0
-  #   if hasAce then [score, score + 10] else [score]
+  stand: ->
+    console.log('STAND')
+    #check dealer score
+    #if dealer score < 17 dealer hit
+    #if dealer score >= 17 stand
