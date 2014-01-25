@@ -19,14 +19,20 @@ class window.Hand extends Backbone.Collection
     hasAce = @reduce (memo, card) ->
       memo or card.get('value') is 1
     , false
+    hidden = @reduce (hidden, card) ->
+      hidden + if not card.get 'revealed' then card.get 'value' else 0
+    , 0
+    console.log('hiddencard', hidden)
     score = @reduce (score, card) ->
       score + if card.get 'revealed' then card.get 'value' else 0
     , 0
     @bust() if score > 21   #will need to handle ace
-    if hasAce then [score, score + 10] else [score]
+    if hasAce then [score, score + 10, hidden] else [score, hidden]
+
+
 
   #send out bust signal, call bust from above to send out signal
-  bust: -> 
+  bust: ->
     @trigger 'bust'
 
   clear: ->
@@ -35,7 +41,5 @@ class window.Hand extends Backbone.Collection
     console.log('after clear', @length)
 
   stand: ->
-    console.log('STAND')
-    #check dealer score
-    #if dealer score < 17 dealer hit
-    #if dealer score >= 17 stand
+    @trigger 'stand'
+    console.log('triggered STAND')

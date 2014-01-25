@@ -3,6 +3,45 @@ body {
   margin-left: 100px;
 }
 
+button {
+   width: 100px;
+   height: 40px;
+   margin: 10 10 0 0;  /* x Right Bottom x  */
+   /*border-top: 1px solid #456070;*/
+   background: #28632c;
+   background: -webkit-gradient(linear, left top, left bottom, from(#5c6a73), to(#28632c));
+   background: -webkit-linear-gradient(top, #5c6a73, #28632c);
+   background: -moz-linear-gradient(top, #5c6a73, #28632c);
+   background: -ms-linear-gradient(top, #5c6a73, #28632c);
+   background: -o-linear-gradient(top, #5c6a73, #28632c);
+   -webkit-border-radius: 9px;
+   -moz-border-radius: 9px;
+   border-radius: 9px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 20px;
+   font-family: Georgia, serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+button:hover {
+   border-top-color: #495c42;
+   background: #495c42;
+   color: #ccc;
+   }
+button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.play-again {
+   width: 300px;
+}
+
+
 .card {
   background-color: white;
   float: left;

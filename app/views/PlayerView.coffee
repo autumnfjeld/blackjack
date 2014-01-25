@@ -3,10 +3,9 @@ class window.PlayerView extends Backbone.View
   className: 'hand'
 
   #todo: switch to mustache
-  template: _.template '<h2><% if(isDealer){ %>Dealer<% }else{ %>You<% } %> <span class="score"></span>
-    <span class="bust"></span></h2>'
+  template: _.template '<h2><% if(isDealer){ %>Dealer<% }else{ %>You<% } %> <span class="score"></span></h2>'
   template2: _.template '<span class="bust">BUST!!!!</span></h2>'
-  template3: _.template('<img src="<%= uri %>" class="<%= state %>" />')
+  # template3: _.template('<img src="<%= uri %>" class="<%= state %>" />')
 
   initialize: ->
     @collection.on 'add remove change', => @render()
